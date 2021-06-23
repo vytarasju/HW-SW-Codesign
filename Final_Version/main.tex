@@ -21,6 +21,8 @@
 
 \pagestyle{empty}
 
+\bibliographystyle{IEEEtran}
+
 \begin{document}
 \title{Forced-Directed List-Scheduling}
 
@@ -54,7 +56,7 @@ This specific scheduling algorithm is essentially an extension of an already men
 
 \section{List-Scheduling Relevancy}
 
-Relatively simple explanation of List-Scheduling (LS) (also refereed by Priority List Based Scheduling) is giving some sort of property to each of the component and defining a position of the component in a list corresponding to its properties unit. The conditions of the problem at hand are: having specified hardware constraints and trying to minimise the total time execution by using a local priority function to delay, or in other words - deffer, operations, which are at risk of creating recourse conflicts.
+Relatively simple explanation of List-Scheduling (LS) \cite{b3} (also refereed by Priority List Based Scheduling) is giving some sort of property to each of the component and defining a position of the component in a list corresponding to its properties unit. The conditions of the problem at hand are: having specified hardware constraints and trying to minimise the total time execution by using a local priority function to delay, or in other words - deffer, operations, which are at risk of creating recourse conflicts.
 
 \subsection{Concept Definition}
 
@@ -76,7 +78,7 @@ The priority function selected clearly impacts the results of the list-schedulin
 Overall, LS algorithm is so widely used, that majority of heuristic approaches were based from LS. Its low computational complexity makes it easily adaptable to bigger sized scheduling problems, where some more advanced heuristic scheduling approaches start gradually increasing their overall execution times, LS stays as a relatively quick algorithm. And in terms of smaller sized problems, other approaches have been shown not to differ much in latency. Hence, LS is a simple solution, which can be easily adapted to various situations.
 
 \section{Force-Directed Relevancy}
-Force-Directed Scheduling (FDS) was created in 1987 by Paulin and Knight, with an idea to find the most optimal and sufficient approach on how to minimise resource constrained scheduling problems (in real applications by reducing functional units, registers and buses), aiming for balanced overall concurrency of the operations, with having in mind of the design space exploration focus. To understand the working concept of the scheduling, its basic properties have to be defined.
+Force-Directed Scheduling (FDS) \cite{b1} was created in 1987 by Paulin and Knight, with an idea to find the most optimal and sufficient approach on how to minimise resource constrained scheduling problems (in real applications by reducing functional units, registers and buses), aiming for balanced overall concurrency of the operations, with having in mind of the design space exploration focus. To understand the working concept of the scheduling, its basic properties have to be defined.
 
 \subsection{Basic Properties}
 
@@ -141,7 +143,7 @@ In terms of the force calculation, the same methods are applied, which are alrea
 
 \begin{figure}[htbp]
 \centerline{\includegraphics[scale=.5]{Result_Applience.png}}
-\caption{Fifth-Order Wave Digital Elliptic Filter Results}
+\caption{Fifth-Order Wave Digital Elliptic Filter Results \cite{b2}}
 \label{wavefilter}
 \end{figure}
 
@@ -190,19 +192,7 @@ Even if the computational power complexity is low, force calculations is an extr
 Paulins and Knights implementation of FDLS already has slight improvements done by other people, it is still a widely used algorithm, but there are definitely better options out there.
 
 \section{Conclusion}
-This unique scheduling approach, combining different concepts from two different algorithms, definitely shows, that in terms of heuristic scheduling solutions, there can be always room for improvement. Even if FDLS is a relatively outdated solution by today's standards, there are many interesting technological enhancements which can still easily use the concept of FDLS and receive quick and computationally light results, with the ability of adapting the concept to a specific problem.
+This unique scheduling approach, combining different concepts from two different algorithms, definitely shows, that in terms of heuristic scheduling solutions, there can be always room for improvement. Even if there are already modified and improved FDLS solutions by this day, compared to the original Paulin and Knights implementation, there are many interesting technological enhancements which can still easily use the concept of the original FDLS and receive quick and computationally relatively light results, with the ability of adapting the concept to a specific problem.
 
-\begin{thebibliography}{00}
-\bibitem{b1} 
-Micheli, G. De (1994). Synthesis and Optimization of Digital Circuits. McGraw-Hill, New York.
-\bibitem{b2} 
-Paulin, P. G. and Knight, J. P. (1989). Force-directed scheduling for the behavioral synthesis of asic’s. IEEE Transactions on Computer-Aided Design, 8:661–679.
-\bibitem{b3}
-R. A. Walker and S. Chaudhuri, "Introduction to the scheduling problem," in IEEE Design & Test of Computers, vol. 12, no. 2, pp. 60-69, Summer 1995, doi: 10.1109/54.386007.
-\bibitem{b4}
-Paulin, P. G. and Knight, J. P. (1987). Force-directed scheduling in automatic data path synthesis. In 24th ACM/IEEE conference Proceedings on Design Automation Conference.
-\bibitem{b5}
-K. O'Neal, D. Grissom and P. Brisk, "Force-Directed List Scheduling for Digital Microfluidic Biochips," 2012 IEEE/IFIP 20th International Conference on VLSI and System-on-Chip (VLSI-SoC), 2012, pp. 7-11, doi: 10.1109/VLSI-SoC.2012.7332068.
-\end{thebibliography}
-
+\bibliography{references}
 \end{document}
